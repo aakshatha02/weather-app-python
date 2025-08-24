@@ -9,4 +9,6 @@ It fetches current weather data from [Open-Meteo](https://open-meteo.com/) API.
 - Simple GUI with Tkinter
 
 ## How to Run
-1. Install required packages:  
+
+- Install required packages
+- Run the app
