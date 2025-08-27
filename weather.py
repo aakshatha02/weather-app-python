@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import requests
 from geopy.geocoders import Nominatim
-
+import datetime
 
 # -----------------------------
 # Function to fetch weather data
@@ -39,13 +39,15 @@ def get_weather():
         temp = weather["temperature"]
         windspeed = weather["windspeed"]
         weather_code = weather["weathercode"]
-        
+        today = datetime.datetime.now()
+
         # Display results
         result_label.config(
             text=f"City: {city.title()}\n"
                  f"Temperature: {temp}°C\n"
                  f"Wind Speed: {windspeed} km/h\n"
-                 f"Weather Code: {weather_code}"
+                 f"Weather Code: {weather_code}\n"
+                 f"Date: {today}"
         )
         
     except Exception as e:
